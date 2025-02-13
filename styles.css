@@ -1,0 +1,61 @@
+body {
+    font-family: 'Calibri', Courier, monospace, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f2f2f7; /* iOS system background color */
+}
+
+.container {
+    text-align: center;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 20px; /* More rounded corners like iOS */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12); /* Softer, more modern shadow */
+    max-width: 90%;
+    width: 400px; /* Control maximum width */
+}
+
+.timer {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; /* iOS system font */
+    font-size: 4.5rem; /* Larger timer */
+    font-weight: 300; /* Lighter weight for modern look */
+    margin: 2rem 0;
+    color: #1c1c1e; /* iOS text color */
+}
+
+.controls button {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 1.1rem;
+    margin: 0 0.5rem;
+    padding: 0.8rem 1.5rem;
+    cursor: pointer;
+    background-color: #007AFF; /* iOS blue */
+    color: white;
+    border: none;
+    border-radius: 12px; /* iOS button style */
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.controls button:hover {
+    background-color: #0063CC; /* Darker iOS blue */
+    transform: translateY(-1px);
+}
+
+#status-text {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 1.1rem;
+    color: #8e8e93; /* iOS secondary text color */
+    margin-top: 1.5rem;
+} 
+
+#reset {
+    background-color: #FF3B30; /* iOS red */
+}
+
+#reset:hover {
+    background-color: #D70015; /* Darker iOS red */
+}
