@@ -61,6 +61,15 @@ body {
     background-color: #D70015; /* Darker iOS red */
 }
 
+/* Add styles for the new Add 5 Minutes button */
+#add-five {
+    background-color: #34C759; /* iOS green */
+}
+
+#add-five:hover {
+    background-color: #248A3D; /* Darker iOS green */
+}
+
 /* Add these new dark mode styles */
 [data-theme="dark"] body {
     background-color: #000000;
