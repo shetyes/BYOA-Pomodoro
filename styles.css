@@ -16,6 +16,7 @@ body {
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12); /* Softer, more modern shadow */
     max-width: 90%;
     width: 400px; /* Control maximum width */
+    position: relative;
 }
 
 .timer {
@@ -41,7 +42,7 @@ body {
 }
 
 .controls button:hover {
-    background-color: #0063CC; /* Darker iOS blue */
+    background-color: #0058cc; /* Darker iOS blue */
     transform: translateY(-1px);
 }
 
@@ -58,4 +59,34 @@ body {
 
 #reset:hover {
     background-color: #D70015; /* Darker iOS red */
+}
+
+/* Add these new dark mode styles */
+[data-theme="dark"] body {
+    background-color: #000000;
+}
+
+[data-theme="dark"] .container {
+    background-color: #1c1c1e;
+}
+
+[data-theme="dark"] .timer {
+    color: #ffffff;
+}
+
+[data-theme="dark"] #status-text {
+    color: #98989d;
+}
+
+/* Optional: adjust button colors for dark mode */
+[data-theme="dark"] .controls button {
+    background-color: #bf00ff;
+}
+
+[data-theme="dark"] .controls button:hover {
+    background-color: #9900cc;
+}
+
+[data-theme="dark"] #mode-switch {
+    color: #ffffff;
 }

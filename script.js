@@ -12,14 +12,8 @@ const statusText = document.getElementById('status-text');
 function updateDisplay() {
     const minutes = Math.floor(timeLeft / 60);
     const seconds = timeLeft % 60;
-    const timeString = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
-    
-    // Update the display
     minutesDisplay.textContent = minutes.toString().padStart(2, '0');
     secondsDisplay.textContent = seconds.toString().padStart(2, '0');
-    
-    // Update the document title
-    document.title = `${timeString} - Neetika's Timer`;
 }
 
 function startTimer() {
@@ -33,9 +27,9 @@ function startTimer() {
                 timerId = null;
                 isWorkTime = !isWorkTime;
                 timeLeft = isWorkTime ? 25 * 60 : 5 * 60;
-                statusText.textContent = isWorkTime ? 'Work Time' : 'Break Time';
+                updateStatus();
                 updateDisplay();
-                alert(isWorkTime ? 'Work Time!' : 'Break Time!');
+                alert(isWorkTime ? '☀️ Work Time!' : '🌙 Break Time!');
             }
         }, 1000);
     }
@@ -51,12 +45,17 @@ function resetTimer() {
     timerId = null;
     isWorkTime = true;
     timeLeft = 25 * 60;
-    statusText.textContent = 'Work Time';
+    updateStatus();
     updateDisplay();
+}
+
+function updateStatus() {
+    statusText.textContent = isWorkTime ? '☀️ Work Time' : '🌙 Break Time';
 }
 
 // Initialize
 timeLeft = 25 * 60;
+updateStatus();
 updateDisplay();
 
 // Event listeners
